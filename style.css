@@ -1,0 +1,282 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========== LR Styles ========== */
+
+:root {
+  --roboto: 'Roboto', sans-serif;
+  --oswald: 'Oswald', sans-serif;
+  --ytBlack: hsl(0, 0%, 16%);
+  --ytRed: hsl(0, 100%, 50%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ytRed);
+  font-family: var(--roboto);
+}
+
+.mainContainer {
+  width: 20rem;
+  height: 30rem;
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(61, 61, 61, 0.7);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* ===== Title and Logo */
+.logo-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainTitle {
+  color: var(--ytBlack);
+  font-size: 1.6rem;
+  font-family: var(--oswald);
+  font-weight: 500;
+}
+
+.fab {
+  color: var(--ytRed);
+  font-size: 1.8rem;
+}
+
+#logo {
+  width: 3.3rem;
+  height: 3rem;
+  opacity: 0.9;
+}
+
+/* ===== Title Section ===== */
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.introText p {
+  font-size: 0.8rem;
+  padding-top: 0.3rem;
+}
+
+/* ===== Inputs ===== */
+.inputs {
+  position: relative;
+  width: 100%;
+  height: 3.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.inputs input {
+  width: 100%;
+  height: 3.1rem;
+  padding-top: 1.1rem;
+  padding-left: 9px;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 16%);
+  border-radius: 0.2rem;
+  transition: 0.2s;
+}
+
+.inputs label {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  font-size: 1.1rem;
+  color: var(--ytBlack);
+  transition: 0.2s;
+}
+
+.inputs input:focus ~ label,
+.inputs input:valid ~ label {
+  top: 10%;
+  font-size: 0.8rem;
+  color: var(--ytBlack);
+}
+
+.inputs input:focus {
+  border: 2px solid hsl(35, 100%, 50%);
+}
+
+/* ===== Forgot Password ===== */
+.forgotPass {
+  width: 8.75rem;
+  padding: 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--ytBlack);
+  transition: 0.3s;
+  border-radius: 0.8rem;
+}
+
+.forgotPass:hover,
+.forgotPass:focus {
+  color: var(--ytRed);
+}
+
+/* ===== Button ===== */
+.signIn {
+  height: 3.1rem;
+  background-color: var(--ytRed);
+  outline: none;
+  border: none;
+  border-radius: 1.8rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.signIn:hover {
+  color: hsl(35, 100%, 50%);
+  background-color: var(--ytBlack);
+  transition: 0.3s;
+}
+
+/* ===== New User Link ===== */
+.newUser {
+  text-align: center;
+}
+
+.joinHere {
+  text-decoration: none;
+  color: var(--ytRed);
+  font-weight: 600;
+}
